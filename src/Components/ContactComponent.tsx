@@ -1,13 +1,12 @@
 import React, { useState, FormEvent } from "react";
 import { useNavigate } from "react-router-dom";
-import { useMutation } from "@tanstack/react-query";
 import FormValidation from "../Hooks/formValidation";
-import axios from "axios";
-import { useDispatch } from "react-redux";
-import { setDetails } from "../Redux/contactSlice";
+// import { useDispatch } from "react-redux";
 import { ToastContainer } from "react-toastify";
 import toastifyNotifications from "./Toast/Toastify";
-import e from "express";
+// import { setDetails } from "../Redux/contactSlice";
+// import axios from "axios";
+// import { useMutation } from "@tanstack/react-query";
 
 const {inValidToast, successToast} = toastifyNotifications()
 
@@ -26,19 +25,19 @@ const contactsData = [
   },
 ];
 
-interface Data {
-  id: string;
-  firstName: string;
-  lastName: string;
-  email: string;
-  phone: number;
-  status:string
-}
+// interface Data {
+//   id: string;
+//   firstName: string;
+//   lastName: string;
+//   email: string;
+//   phone: number;
+//   status:string
+// }
 
 function ContactComponent() {
     const { errors, handleInputs, isValidForm, Form, handleStatusChange } = FormValidation();
   const [showModal, setShowModal] = useState(false);
-  const dispatch = useDispatch();
+//   const dispatch = useDispatch();
   const navigate = useNavigate();
 
  

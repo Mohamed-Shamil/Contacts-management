@@ -1,4 +1,3 @@
-import { link } from "fs";
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
@@ -53,7 +52,7 @@ const Sidebar: React.FC = () => {
               key={index}
               className={`text-cyan-600 text-lg font-medium flex items-center gap-x-4 cursor-pointer p-2 hover:bg-cyan-300 rounded-md ${
                 menu.gap ? "mt-9" : "mt-2 "
-              } ${index === index && open === true && " hover:bg-cyan-500 hover:text-white hover:animate-bounce"}`}
+              } ${index && open === true && " hover:bg-cyan-500 hover:text-white hover:animate-bounce"}`}
               onClick = {()=> navigate(menu.link)}
             >
               <img className="w-9" src={`Images/${menu.src}.png`} alt={menu.title} />

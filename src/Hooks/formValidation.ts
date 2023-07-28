@@ -1,4 +1,4 @@
-import { useState, ChangeEvent } from "react";
+import { useState } from "react";
 
 const FormValidation = () => {
   const [errors, setError] = useState({
